@@ -48,6 +48,9 @@ class ResourceMetadata(plugins.SingletonPlugin):
         context['defer_commit'] = True
         toolkit.get_action('package_update')(context, pkg_dict)
         context.pop('defer_commit')
+    
+    def get_resource_uploader(self, data_dict):
+        return none
 
     def get_metadata(self, file_path):
         hdulist = fits.open(file_path, memmap=True)
