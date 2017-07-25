@@ -12,7 +12,7 @@ import ckan.plugins.toolkit as toolkit
 log = logging.getLogger(__name__)
 
 class ResourceMetadata(plugins.SingletonPlugin):
-    plugins.implements(plugins.IResourceUpload)
+    plugins.implements(plugins.IUploader)
     plugins.implements(plugins.IResourcePreview)
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.IRoutes)
